@@ -6,11 +6,12 @@ import wave
 import pyaudio
 
 def setup():
-    for i in rnage(3):
+    for i in range(3):
         GPIO.output(motor1, True)
         time.sleep(0.5)
         GPIO.output(motor1, False)
         time.sleep(0.5)
+    
 
 # 오디오 파일 재생 함수
 def play_audio(file_path):
@@ -49,7 +50,7 @@ if __name__ == '__main__':
     GPIO.setmode(GPIO.BCM)
     motor1 = 26
     GPIO.setup(motor1, GPIO.OUT)
-
+    setup()
     app.run(host = "192.168.211.38", port = 9999)
     # app.run(host = "192.168.0.103" , port = 9999)
         
