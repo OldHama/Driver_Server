@@ -34,7 +34,7 @@ def hello():
 def wakeup():
     global handler
     GPIO.output(motor1, True)
-    play_audio("/path/to/your/audiofile.wav")
+    play_audio("/home/raspberrypi/Junee/ALERT.wav")
     GPIO.output(motor1, False)
     return "wakeup"
     
