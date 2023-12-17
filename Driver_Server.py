@@ -7,7 +7,6 @@ GPIO.setwarnings(False)
 app = Flask(__name__)
 @app.route('/')
 def hello():
-
     return "hello"
 
 @app.route('/wakeup')
