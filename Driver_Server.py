@@ -20,7 +20,6 @@ def process_requests(request_queue):
                     rate=wf.getframerate(),
                     output=True,
                     output_device_index = 0)
-        p = pyaudio.PyAudio()
         while len(data) > 0:
             stream.write(data)
             data = wf.readframes(1024)
